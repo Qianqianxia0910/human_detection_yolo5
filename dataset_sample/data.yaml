@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['human']
+
+roboflow:
+  workspace: project
+  project: yolo_dection
+  version: 1
+  license: MIT
+  url: https://universe.roboflow.com/project/yolo_dection/dataset/1
