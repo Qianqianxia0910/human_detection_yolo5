@@ -13,8 +13,25 @@ This project aims to detect human in a 3D Lidar dataset using YOLOv5. The 3D Lid
 LiDAR model: Livox Horizon
 
 ### 1.creat dataset
-[Roboflow](https://roboflow.com/?ref=ultralytics)can label, prepare, and host custom data automatically in YOLO format.
-<img src="./image/images_74.png" width="800px">
+[Roboflow](https://roboflow.com/?ref=ultralytics) can label, prepare, and host custom data automatically in YOLO format, and create [data.yaml](dataset_sample/data.yaml).
+```
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['human']
+
+roboflow:
+  workspace: project
+  project: yolo_dection
+  version: 1
+  license: MIT
+  url: https://universe.roboflow.com/project/yolo_dection/dataset/1
+```
+
+<img src="./image/images_74.png" width="600px">
+
 
 ### 2. Select a Model
 I selected YOLOv5m, a medium-sized model.
@@ -22,7 +39,7 @@ I selected YOLOv5m, a medium-sized model.
 
 
 ### 3. Train
-#### 3.1.Visualize a few training images
+#### 3.1.visualize a few training images
 <img src="./image/trainning.png" width="800px">
 
 #### 3.2 train model
